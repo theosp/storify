@@ -1,0 +1,15 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "bootstrap-slider-touch": {
+        "path": "."
+      }
+    },
+    "packages": {
+      "bootstrap-slider-touch": {
+        "path": "."
+      }
+    }
+  }
+}
