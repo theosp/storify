@@ -25,6 +25,12 @@ Deps.autorun(function () {
     }
 });
 
+Template.navigation.events({
+	"click": function(){
+        Session.set("current_position", null);
+	}
+});
+
 Template.view.helpers({
     main: function () {
         return Session.get("current_position") === null;
