@@ -1,0 +1,70 @@
+<head>
+    <title>storify</title>
+</head>
+
+<body>
+    {{>navigation}}
+
+    <div class="container">
+        {{>view}}
+    </div>
+
+    <footer class="bs-footer" role="contentinfo">
+          <div class="container">
+          </div>
+    </footer>
+
+</body>
+
+<template name="navigation">
+    <div class="navbar navbar-fixed-top">
+        <div class="container">
+            <a href="#" class="navbar-brand logo">Storify</a>
+        </div>
+    </div>
+</template>
+
+<template name="view">
+    {{#if main}}
+        {{>stories}}
+    {{else}}
+        {{>story}}
+    {{/if}}
+
+</template>
+
+<template name="stories">
+    {{#each stories}}
+        {{>story_image}}
+    {{/each}}
+
+    {{>slide_data}}
+    <input type="button" value="New Story" class="form-control new-story btn-primary">
+</template>
+
+<template name="story">
+    {{#each me_and_my_parents}}
+        {{>story_image}}
+    {{/each}}
+    Feedbacks 
+    <div class="childs">
+    {{#each childs}}
+        {{>story_image}}
+    {{/each}}
+    </div>
+
+    {{>slide_data}}
+    <input type="button" value="Post Feedback" class="form-control new-slide btn-primary">
+</template>
+
+<template name="slide_data">
+    <input type="text" placeholder="Caption" class="form-control caption"> 
+    <input type="text" placeholder="URL" class="form-control url">
+</template>
+
+<template name="story_image">
+    <div class="story_image"> 
+        <div>{{caption}} <span class="delete">[X]</span></div>
+        <img src="{{url}}" />
+    </div>
+</template>

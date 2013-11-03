@@ -1,0 +1,15 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "winston": {}
+    },
+    "packages": {
+      "winston": {
+        "git": "https://github.com/tomrogers3/meteor-winston.git",
+        "tag": "v0.0.2",
+        "commit": "3e27e22cc7a9bae7d0a6b4048619cf29d8d0d36b"
+      }
+    }
+  }
+}
